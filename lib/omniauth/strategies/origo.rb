@@ -7,6 +7,8 @@ module OmniAuth
 
       option :name, "origo"
 
+      # TODO: make this support HTTPS when bug in Origo /-/site/check_mastersession
+      # is resolved. See README.md
       option :client_options, {
         :site => 'http://secure.origo.no',
         :token_url => '/-/oauth/token',
