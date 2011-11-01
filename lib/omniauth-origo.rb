@@ -1,6 +1,6 @@
 require "omniauth-origo/version"
 
-module Omniauth
+module OmniAuth
   module Strategies
     autoload :Origo,  'omniauth/strategies/origo'
   end
