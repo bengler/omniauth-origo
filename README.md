@@ -4,6 +4,14 @@ This gem is designed to work with the in-beta OmniAuth 1.0 library.
 
 It will not be officially released on RubyGems.org until OmniAuth 1.0 is released.
 
+## How to include in your Gemfile
+
+´´´
+gem 'omniauth-origo', '~> 1.0.0.rc2', :git => 'https://github.com/origo/omniauth-origo.git'
+
+´´´
+
+
 ##License
 
 Copyright (C) 2011 by Origogruppen AS.
