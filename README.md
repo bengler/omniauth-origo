@@ -1,4 +1,4 @@
-#OmniAuth Origo (oAuth2) strategy
+#OmniAuth 1.0 Origo (OAuth 2) strategy
 
 This gem is designed to work with the in-beta OmniAuth 1.0 library.
 
@@ -11,7 +11,7 @@ gem 'omniauth-origo', '~> 1.0.0.rc2', :git => 'https://github.com/origo/omniauth
 
 ```
 
-## TODOS:
+## Todo
 Make strategy support HTTPS when bug in origo/SiteController#check_master_session redirect is fixed.
 It will give an error in Safari browsers as it mixes http and https in the oAuth float.
 
