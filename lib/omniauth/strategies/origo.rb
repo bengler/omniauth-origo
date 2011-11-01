@@ -8,7 +8,7 @@ module OmniAuth
       option :name, "origo"
 
       option :client_options, {
-        :site => 'https://secure.origo.no',
+        :site => 'http://secure.origo.no',
         :token_url => '/-/oauth/token',
         :authorize_url => '/-/oauth/authorize'
       }
