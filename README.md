@@ -1,6 +1,6 @@
 #OmniAuth 1.0 Origo (OAuth 2) strategy
 
-This gem is designed to work with the in-beta OmniAuth 1.0 library.
+This gem is designed to work with the in-beta OmniAuth 1.0 library against Origo.no
 
 It will not be officially released on RubyGems.org until OmniAuth 1.0 is released.
 
