@@ -11,6 +11,8 @@ gem 'omniauth-origo', '~> 1.0.0.rc2', :git => 'https://github.com/origo/omniauth
 
 ```
 
+##Author
+Per-Kristian Nordnes <pk@origo.no>, November 2011
 
 ##License
 
