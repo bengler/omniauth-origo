@@ -1,5 +1,4 @@
 require "omniauth-origo/version"
-require "omniauth"
 
 module Omniauth
   module Strategies

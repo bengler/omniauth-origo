@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/omniauth-oauth/version', __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
+require 'omniauth-origo/version'
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Per-Kristian Nordnes"]
@@ -9,11 +10,12 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/origo/omniauth-origo"
 
   gem.add_runtime_dependency     'omniauth', '~> 1.0.0.rc2'
+  gem.add_runtime_dependency     'omniauth-oauth', '~> 1.0.0.rc2'
   gem.add_runtime_dependency     'oauth'
-  gem.add_development_dependency 'rspec', '~> 2.6'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'rack-test'
+  # gem.add_development_dependency 'rspec', '~> 2.6'
+  # gem.add_development_dependency 'webmock'
+  # gem.add_development_dependency 'simplecov'
+  # gem.add_development_dependency 'rack-test'
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
