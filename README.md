@@ -15,7 +15,7 @@ gem 'omniauth-origo', '~> 1.0.0.rc2', :git => 'https://github.com/origo/omniauth
 
 * Make strategy support HTTPS when bug in origo.no/-/site/check_master_session
 redirect is fixed. Using HTTPS will give an error in Safari browsers if the user have no master session cookie installed yet.
-Safari don't seem to like mixing HTTP and HTTPS redirects inside the OAuth flow, and will deny the redirect with an error message.
+Safari doesn't seem to like mixed HTTP and HTTPS redirects inside the OAuth flow, and will deny the redirect to login with an error.
 
 * Write automated tests!
 
