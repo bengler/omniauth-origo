@@ -1,31 +1,27 @@
-require 'omniauth-oauth'
+require 'omniauth-oauth2'
 require 'multi_json'
 
 module OmniAuth
   module Strategies
-    class Origo < OmniAuth::Strategies::OAuth
+    class Origo < OmniAuth::Strategies::OAuth2
       # Give your strategy a name.
       option :name, "origo"
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
       option :client_options, {
-        :site => 'https://secure.origo.no'
+        :site => 'https://secure.origo.no',
+        :token_url => '/-/oauth/token',
+        :authorize_url => '/-/oauth/authorize'
       }
       
-      def initialize(*args)
-        super
-        options.client_options[:authorize_path] = '/-/oauth/authorize'
-        options.client_options[:token_url] = '/-/oauth/token'
-      end
-
       # These are called after authentication has succeeded. If
       # possible, you should try to set the UID without making
       # additional calls (if the user id is returned with the token
       # or as a URI parameter). This may not be possible with all
       # providers.
-      uid{ user_data['result']['user']['id'] }
-
+      uid{ user_data['result']['user']['id'].to_s }
+        
       info do
         {
            'name' => user_data['result']['user']['full_name'],
@@ -44,9 +40,9 @@ module OmniAuth
           'raw_info' => user_data
         }
       end
-
+            
       def user_data
-        @data ||= MultiJson.decode(@access_token.get('/-/api/v2/js/user'))
+        @user_data ||= access_token.get('/-/api/v2/js/user').parsed
       end
 
     end
