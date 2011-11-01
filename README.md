@@ -11,6 +11,10 @@ gem 'omniauth-origo', '~> 1.0.0.rc2', :git => 'https://github.com/origo/omniauth
 
 ```
 
+## TODOS:
+Make strategy support HTTPS when bug in origo/SiteController#check_master_session redirect is fixed.
+It will give an error in Safari browsers as it mixes http and https in the oAuth float.
+
 ##Author
 Per-Kristian Nordnes <pk@origo.no>, November 2011
 
