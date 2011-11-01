@@ -3,6 +3,8 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'omniauth-origo/version'
 
 Gem::Specification.new do |gem|
+  gem.name          = "omniauth-origo"
+  gem.version       = OmniAuth::Origo::VERSION
   gem.authors       = ["Per-Kristian Nordnes"]
   gem.email         = ["per.kristian.nordnes@gmail.com"]
   gem.description   = %q{A OAuth (1.0/1.0a) strategy for Origo.}
@@ -13,11 +15,9 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency     'omniauth-oauth', '~> 1.0.0.rc2'
   gem.add_runtime_dependency     'oauth'
   gem.add_dependency             'multi_json'
-  
+
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "omniauth-origo"
   gem.require_paths = ["lib"]
-  gem.version       = OmniAuth::Origo::VERSION
 end
