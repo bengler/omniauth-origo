@@ -6,10 +6,10 @@ It will not be officially released on RubyGems.org until OmniAuth 1.0 is release
 
 ## How to include in your Gemfile
 
-´´´
+```
 gem 'omniauth-origo', '~> 1.0.0.rc2', :git => 'https://github.com/origo/omniauth-origo.git'
 
-´´´
+```
 
 
 ##License
