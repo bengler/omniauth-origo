@@ -7,12 +7,12 @@ Gem::Specification.new do |gem|
   gem.version       = OmniAuth::Origo::VERSION
   gem.authors       = ["Per-Kristian Nordnes"]
   gem.email         = ["per.kristian.nordnes@gmail.com"]
-  gem.description   = %q{A OAuth (1.0/1.0a) strategy for Origo.}
-  gem.summary       = %q{A OAuth (1.0/1.0a) strategy for Origo.}
+  gem.description   = %q{Official OmniAuth OAuth 2 strategy for Origo.}
+  gem.summary       = %q{Official OmniAuth OAuth 2 strategy for Origo.}
   gem.homepage      = "https://github.com/origo/omniauth-origo"
 
   gem.add_runtime_dependency     'omniauth', '~> 1.0.0.rc2'
-  gem.add_runtime_dependency     'omniauth-oauth', '~> 1.0.0.rc2'
+  gem.add_runtime_dependency     'omniauth-oauth2', '~> 1.0.0.rc2'
   gem.add_runtime_dependency     'oauth'
   gem.add_dependency             'multi_json'
 
