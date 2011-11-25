@@ -4,22 +4,22 @@ require 'multi_json'
 module OmniAuth
   module Strategies
     class Origo < OmniAuth::Strategies::OAuth2
-      
-      USERINFO_ENDPOINT = 'http://origo.no/-/api/v2/user/omniauth_hash'
+            
+      USERINFO_ENDPOINT = 'https://origo.no/-/api/v2/user/omniauth_hash'
 
       option :name, "origo"
 
       # TODO: make this support HTTPS when bug in Origo /-/site/check_mastersession
       # is resolved. See README.md
       option :client_options, {
-        :site => 'http://secure.origo.no',
+        :site => 'https://secure.origo.no',
         :token_url => '/-/oauth/token',
         :authorize_url => '/-/oauth/authorize'
       }
-      
+
       uid { raw_info['uid'].to_s } # to_s to keep all values as strings
         
-      info do 
+      info do
         raw_info['info']
       end
 
