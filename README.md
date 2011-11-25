@@ -7,17 +7,9 @@ It will not be officially released on RubyGems.org until OmniAuth 1.0 is release
 ## How to include in your Gemfile
 
 ```
-gem 'omniauth-origo', '~> 1.0.0.rc2', :git => 'https://github.com/origo/omniauth-origo.git'
+gem 'omniauth-origo', '~> 1.0.0.rc3', :git => 'https://github.com/origo/omniauth-origo.git'
 
 ```
-
-## Todo
-
-* Make strategy support HTTPS when bug in origo.no/-/site/check_master_session
-redirect is fixed. Using HTTPS will give an error in Safari browsers if the user have no master session cookie installed yet.
-Safari doesn't seem to like mixed HTTP and HTTPS redirects inside the OAuth flow, and will deny the redirect to login with an error.
-
-* Write automated tests!
 
 ##Author
 
