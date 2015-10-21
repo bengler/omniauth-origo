@@ -1,6 +1,15 @@
 require 'spec_helper'
 
 describe OmniAuth::Strategies::Origo do
+
+  before do
+    OmniAuth.config.test_mode = true
+  end
+
+  after do
+    OmniAuth.config.test_mode = false
+  end
+
   subject do
     OmniAuth::Strategies::Origo.new(nil, @options || {})
   end
@@ -9,21 +18,21 @@ describe OmniAuth::Strategies::Origo do
 
   describe '#client' do
     it 'has correct site URL' do
-      subject.client.site.should == 'https://secure.origo.no'
+      expect(subject.client.site).to eq('https://secure.origo.no')
     end
 
     it 'has correct authorize URL' do
-      subject.client.authorize_url.should == 'https://secure.origo.no/-/oauth/authorize'
+      expect(subject.client.authorize_url).to eq('https://secure.origo.no/-/oauth/authorize')
     end
 
     it 'has correct token URL' do
-      subject.client.token_url.should == 'https://secure.origo.no/-/oauth/token'
-    end 
+      expect(subject.client.token_url).to eq('https://secure.origo.no/-/oauth/token')
+    end
   end
 
   describe '#callback_path' do
     it "has the correct callback path" do
-      subject.callback_path.should eq('/auth/origo/callback')
+      expect(subject.callback_path).to eq('/auth/origo/callback')
     end
   end
 
