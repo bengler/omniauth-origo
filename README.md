@@ -1,23 +1,21 @@
-#OmniAuth 1.0 Origo (OAuth 2) strategy
+#OmniAuth 1.2 Origo (OAuth 2) strategy
 
-This gem is designed to work with the in-beta OmniAuth 1.0 library against Origo.no
-
-It will not be officially released on RubyGems.org until OmniAuth 1.0 is released.
+This gem is designed to work with OmniAuth 1.2 library against Origo.no
 
 ## How to include in your Gemfile
 
 ```
-gem 'omniauth-origo', '~> 1.0.0.rc3', :git => 'https://github.com/origo/omniauth-origo.git'
+gem 'omniauth-origo'
 
 ```
 
 ##Author
 
-Per-Kristian Nordnes <pk@origo.no>, November 2011
+Per-Kristian Nordnes <pk@bengler>, November 2015
 
 ##License
 
-Copyright (C) 2011 by Origogruppen AS.
+Copyright (C) 2015 by Bengler AS.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
